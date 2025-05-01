@@ -1,21 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Personal Profile</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Hi, My Name is Ray</h1>
-    <img src="https://via.placeholder.com/150" alt="My Profile Picture">
+    <img src="https://via.placeholder.com/150" alt="My Profile Picture" />
     <p>🌟 A future software engineer. Motto: "A little progress every day."</p>
+
     <h3>📫 Contact:</h3>
     <ul>
       <li>Email: raythong05@gmail.com</li>
       <li>GitHub: <a href="https://github.com/ray012-coder" target="_blank">My GitHub</a></li>
     </ul>
+
+    <h3>🧠 Skills:</h3>
+    <ul>
+      <li>HTML & CSS</li>
+      <li>JavaScript (in progress)</li>
+      <li>Git & GitHub</li>
+    </ul>
+
+    <h3>💻 Projects:</h3>
+    <ul>
+      <li>
+        <strong>Month 1 Website</strong> –
+        <a href="https://github.com/ray012-coder/month1-intro-website" target="_blank">View on GitHub</a>
+      </li>
+      <li><strong>More coming soon...</strong></li>
+    </ul>
+
+    <!-- Motivational Button -->
+    <button onclick="showQuote()">🎯 Click for Motivation</button>
+    <p id="quote" class="quote-text"></p>
   </div>
+
+  <!-- JavaScript -->
+  <script>
+    function showQuote() {
+      const quotes = [
+        "Keep going, you're getting better!",
+        "Every day is a chance to improve.",
+        "Success starts with one small step.",
+        "Code. Learn. Repeat.",
+        "Never stop learning!"
+      ];
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[random];
+    }
+  </script>
 </body>
 </html>
